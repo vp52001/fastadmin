@@ -74,11 +74,11 @@ class Index extends Backend
                 'password'  => $password,
                 '__token__' => $token,
             ];
-            if (Config::get('fastadmin.login_captcha')) {
-                $rule['captcha'] = 'require|captcha';
-                $data['captcha'] = $this->request->post('captcha');
-            }
-            $validate = new Validate($rule, [], ['username' => __('Username'), 'password' => __('Password'), 'captcha' => __('Captcha')]);
+//            if (Config::get('fastadmin.login_captcha')) {
+//                $rule['captcha'] = 'require|captcha';
+//                $data['captcha'] = $this->request->post('captcha');
+//            }
+//            $validate = new Validate($rule, [], ['username' => __('Username'), 'password' => __('Password'), 'captcha' => __('Captcha')]);
             $result = $validate->check($data);
             if (!$result) {
                 $this->error($validate->getError(), $url, ['token' => $this->request->token()]);
