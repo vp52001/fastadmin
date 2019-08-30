@@ -12,10 +12,6 @@ return array (
     array (
       0 => 'geetest',
     ),
-    'admin_login_init' => 
-    array (
-      0 => 'loginbg',
-    ),
   ),
   'route' => 
   array (
